@@ -1,89 +1,198 @@
-CoreBlackBox 🚀
+# 🚀 CoreBlackBox
 
-Equipe: Gabriel Theodoro, Marcos Tomita e Renato Silva
+**Equipe:** Gabriel Theodoro, Marcos Tomita e Renato Silva
 
-O CoreBlackBox é uma aplicação descentralizada (dApp) desenvolvida para garantir a integridade, rastreabilidade e imutabilidade dos registros de manutenção utilizando tecnologia Blockchain com Ethereum (Rede Sepolia).
+O **CoreBlackBox** é uma aplicação descentralizada (**dApp**) desenvolvida para garantir a **integridade, rastreabilidade e imutabilidade** de registros de manutenção utilizando tecnologia **Blockchain** com **Ethereum (Rede Sepolia)**.
 
-Cada registro inserido na blockchain se torna permanente e publicamente verificável, impedindo qualquer alteração posterior.
+Cada registro armazenado na blockchain torna-se:
 
-🎥 Fluxo de Operação
+- ✅ Permanente  
+- ✅ Público e verificável  
+- ✅ Imutável após confirmação  
 
-Assista ao vídeo demonstrando o funcionamento completo do sistema:
+O sistema foi criado com foco em segurança, transparência e confiabilidade no armazenamento de informações críticas de manutenção.
 
-(Substitua o link acima pelo vídeo real do projeto.)
+---
 
-🛠️ Tecnologias Utilizadas
-Frontend: React + Vite
-Backend: Node.js
-Blockchain: Ethereum Sepolia + Solidity
-Wallet: MetaMask
-Integração: Ethers.js
-🧪 Como Testar o Projeto
-1. Pré-requisitos
+# 🎥 Demonstração do Projeto
 
-Antes de iniciar, certifique-se de possuir:
+Assista ao vídeo demonstrando o funcionamento completo da aplicação:
 
-Node.js (versão LTS)
-MetaMask instalado no navegador
-Rede Sepolia configurada na MetaMask
-SepoliaETH na carteira
+[![▶️ Assistir ao Vídeo](https://img.shields.io/badge/▶️%20Assistir%20ao%20Vídeo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/SEU_LINK_AQUI)
+
+> ⚠️ Substitua o link acima pelo vídeo real do projeto.
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+|---|---|
+| **React + Vite** | Interface Frontend |
+| **Node.js** | Backend da aplicação |
+| **Solidity** | Desenvolvimento do Smart Contract |
+| **Ethereum Sepolia** | Rede Blockchain utilizada |
+| **MetaMask** | Carteira para autenticação e transações |
+| **Ethers.js** | Integração entre Frontend e Blockchain |
+
+---
+
+# 🧪 Como Executar o Projeto
+
+## 📌 Pré-requisitos
+
+Antes de começar, você precisará ter instalado:
+
+- [Node.js (LTS)](https://nodejs.org/)
+- [MetaMask](https://metamask.io/)
+- Rede **Sepolia** configurada na MetaMask
+- ETH de teste na rede Sepolia
+
 Faucet recomendado:
-https://sepoliafaucet.com/
-2. Instalação
+
+- https://sepoliafaucet.com/
+
+---
+
+# 📥 Instalação
+
+Clone o repositório:
+
+```bash
 git clone https://github.com/SEU_USUARIO/CoreBlackBox.git
+```
 
+Acesse a pasta do projeto:
+
+```bash
 cd CoreBlackBox
+```
 
+Instale as dependências principais:
+
+```bash
 npm install
+```
 
+Instale as dependências do backend:
+
+```bash
 cd backend
 npm install
+```
 
+Instale as dependências do frontend:
+
+```bash
 cd ../frontend
 npm install
-3. Configuração
+```
 
-Na pasta backend, crie o arquivo de ambiente:
+---
 
+# ⚙️ Configuração do Ambiente
+
+Na pasta `backend`, crie o arquivo `.env`:
+
+```bash
 cp .env.example .env
+```
 
-Edite o arquivo .env e insira sua chave privada:
+Adicione sua chave privada no arquivo `.env`:
 
+```env
 PRIVATE_KEY=sua_chave_privada_aqui
+```
 
-⚠️ Importante: Nunca compartilhe sua chave privada e não faça commit do arquivo .env.
+> ⚠️ **IMPORTANTE:**  
+> Nunca compartilhe sua chave privada e jamais envie o arquivo `.env` para o GitHub.
 
-🚀 Deploy do Smart Contract
+---
 
-Execute o deploy do contrato:
+# 🚀 Deploy do Smart Contract
 
+Acesse a pasta backend:
+
+```bash
 cd backend
+```
 
+Execute o script de deploy:
+
+```bash
 node scripts/deploy.js
+```
 
 Após o deploy:
 
-Copie o endereço do contrato gerado
-Atualize a variável CONTRACT_ADDRESS
-Edite o arquivo:
+1. Copie o endereço do contrato gerado
+2. Abra o arquivo:
+
+```bash
 frontend/src/App.jsx
-▶️ Executando o Sistema
+```
+
+3. Atualize a variável:
+
+```javascript
+CONTRACT_ADDRESS = "ENDERECO_DO_CONTRATO"
+```
+
+---
+
+# ▶️ Executando a Aplicação
+
+Acesse a pasta frontend:
+
+```bash
 cd frontend
+```
 
+Inicie o servidor:
+
+```bash
 npm run dev
+```
 
-Acesse no navegador:
+Abra no navegador:
 
+```txt
 http://localhost:5173
-📋 Como Realizar um Registro
-Preencha os campos:
-Tipo de Manutenção
-Nome do Responsável
-Atividade Realizada
-Clique em Registrar na Blockchain
-Confirme a transação na MetaMask
-Aguarde a confirmação da rede
-Visualize o registro no Etherscan
-📄 Licença
+```
+
+---
+
+# 📋 Como Realizar um Registro
+
+1. Preencha os campos:
+   - Tipo de Manutenção
+   - Nome do Responsável
+   - Atividade Realizada
+
+2. Clique em **Registrar na Blockchain**
+
+3. Confirme a transação na MetaMask
+
+4. Aguarde a confirmação da rede
+
+5. Visualize o registro no Etherscan
+
+---
+
+# 🔒 Segurança e Integridade
+
+O uso da tecnologia blockchain garante:
+
+- 🔐 Imutabilidade dos registros
+- 🕵️ Rastreabilidade completa
+- 🌐 Transparência pública
+- 📜 Histórico permanente de manutenção
+
+---
+
+# 📄 Licença
 
 Projeto desenvolvido para fins acadêmicos e demonstração.
+
+---
+```
