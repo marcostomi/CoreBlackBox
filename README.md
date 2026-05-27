@@ -1,27 +1,75 @@
-# CoreBlackBox - ProofChain
+# CoreBlackBox 🚀
+Equipe: Gabriel Theodoro, Marcos Tomita e Renato Silva
 
-Este projeto é uma solução de registro de dados imutável na blockchain, desenvolvida para garantir a integridade e a prova de existência de informações.
+O **CoreBlackBox** é uma aplicação descentralizada (dApp) desenvolvida para garantir a **integridade e a rastreabilidade** de registros de manutenção. Utilizando a tecnologia Blockchain (Rede Ethereum - Sepolia), cada registro inserido torna-se imutável e verificável, garantindo que as informações de manutenção não sejam alteradas após serem gravadas.
 
-## A equipe 
-Luiz Rocha, Gabriel Theodoro, Marcos Tomita e Rento Silva
+## 🎥 Fluxo de Operação
+Veja abaixo o funcionamento do sistema na prática:
 
-## O Problema
-A dificuldade de comprovar a veracidade e a data de criação de registros digitais de forma descentralizada e auditável.
+> **[CLIQUE AQUI PARA ASSISTIR AO VÍDEO DO FLUXO DE REGISTRO]** *(Substitua este link pelo link do seu vídeo)*
 
-## Solução e Arquitetura
-A solução utiliza um contrato inteligente (`Smart Contract`) na rede Ethereum (Sepolia) para registrar o hash dos dados.
-- **Tecnologias:** Solidity, Hardhat, Ethers.js, React, Vite.
-- **Arquitetura:** O backend cuida da lógica do contrato e o frontend fornece a interface para interação via MetaMask.
+---
 
-## Como Executar
-1. Clone o repositório: `git clone https://github.com/marcostomi/CoreBlackBox.git`
-2. **Backend:** Entre na pasta `backend`, instale as dependências (`npm install`) e certifique-se de configurar seu ambiente de deploy.
-3. **Frontend:** Entre na pasta `frontend`, instale as dependências (`npm install`) e inicie com `npm run dev`.
+## 🧪 Como Testar o CoreBlackBox
 
-## Registro na Blockchain (Sepolia)
-- **Endereço do Contrato:** `0x4E615842DEC42d12D1D9346BBF9807104317ce6D`
-- **Link na Testnet (Etherscan):** [https://sepolia.etherscan.io/address/0x4E615842DEC42d12D1D9346BBF9807104317ce6D](https://sepolia.etherscan.io/address/0x4E615842DEC42d12D1D9346BBF9807104317ce6D)
+Siga este passo a passo para configurar e testar o sistema em sua máquina local:
 
-## Link Video e Apresentação
-- https://youtu.be/eVMNh-ne-Js
-- Apresentacao -CoreBlackBox - ProofChain
+### 1. Pré-requisitos
+Certifique-se de ter instalado em seu computador:
+- **Node.js** (Versão LTS).
+- **MetaMask** instalada no seu navegador.
+- **Rede Sepolia** configurada na sua MetaMask.
+- **SepoliaETH** (moedas de teste) na sua carteira. Você pode obtê-las em um [Faucet da Sepolia](https://sepoliafaucet.com/).
+
+### 2. Instalação
+Clone o repositório e instale as dependências necessárias:
+
+```bash
+git clone [https://github.com/SEU_USUARIO/CoreBlackBox.git](https://github.com/SEU_USUARIO/CoreBlackBox.git)
+cd CoreBlackBox
+
+# Instalar dependências
+npm install
+cd backend && npm install
+cd ../frontend && npm install
+
+3. Configuração de Segurança
+Para que o sistema se conecte à blockchain, você precisará configurar sua chave privada:
+
+Na pasta backend, crie o arquivo de ambiente a partir do exemplo:
+
+Bash
+cp .env.example .env
+Abra o arquivo .env gerado e cole sua Chave Privada (Private Key) da MetaMask em PRIVATE_KEY.
+
+⚠️ Aviso Importante: Nunca compartilhe o arquivo .env e nunca o envie para o GitHub. Este arquivo contém acesso à sua carteira e é ignorado pelo Git automaticamente.
+
+4. Deploy do Contrato Inteligente
+No terminal, dentro da pasta backend, execute o script de deploy:
+
+Bash
+node scripts/deploy.js
+O terminal exibirá o Endereço do Contrato. Copie este endereço.
+
+Certifique-se de que este endereço esteja configurado na variável CONTRACT_ADDRESS dentro do arquivo frontend/src/App.jsx.
+
+5. Executando o Sistema
+Na pasta frontend, inicie o servidor de desenvolvimento:
+
+Bash
+cd ../frontend
+npm run dev
+Abra o link gerado (geralmente http://localhost:5173) no seu navegador.
+
+6. Realizando o Teste
+Com o sistema aberto, preencha os campos Tipo de Manutenção, Nome do Responsável e Atividade Realizada.
+
+Clique no botão "Registrar na Blockchain".
+
+A MetaMask abrirá automaticamente. Revise a transação e clique em Confirmar.
+
+O status na tela mudará para "⏳ Enviando para a Blockchain..." e, após a confirmação, para "✅ Registro feito com sucesso!".
+
+Clique no link que aparece na notificação da MetaMask para visualizar sua transação registrada permanentemente no Etherscan.
+
+Projeto desenvolvido para assegurar a imutabilidade e transparência de dados de manutenção.
