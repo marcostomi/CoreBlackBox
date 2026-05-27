@@ -1,0 +1,42 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-3f30f339bf643c5450cfb36623e17283ec2f3809",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "compilerType": "solc",
+  "userSourceNameMap": {
+    "contracts/CoreBlackBox.sol": "project/contracts/CoreBlackBox.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode.linkReferences",
+            "evm.bytecode.object",
+            "evm.bytecode.opcodes",
+            "evm.bytecode.sourceMap",
+            "evm.deployedBytecode.immutableReferences",
+            "evm.deployedBytecode.linkReferences",
+            "evm.deployedBytecode.object",
+            "evm.deployedBytecode.opcodes",
+            "evm.deployedBytecode.sourceMap",
+            "evm.methodIdentifiers"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/CoreBlackBox.sol": {
+        "content": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.20;\r\n\r\ncontract CoreBlackBox {\r\n    // Estrutura para armazenar o registro de prova\r\n    struct ProofRecord {\r\n        string dataHash;     // O hash do documento ou dado\r\n        address owner;       // Quem registrou\r\n        uint256 timestamp;   // Data e hora do registro\r\n    }\r\n\r\n    // Mapeamento para armazenar registros por um ID ou Hash\r\n    mapping(string => ProofRecord) public records;\r\n\r\n    // Evento para facilitar a busca em exploradores (Etherscan)\r\n    event NewRecord(string indexed dataHash, address indexed owner, uint256 timestamp);\r\n\r\n    // Função para registrar um dado\r\n    function registerData(string memory _dataHash) public {\r\n        require(bytes(_dataHash).length > 0, \"O dado nao pode estar vazio\");\r\n        \r\n        // Armazena no blockchain\r\n        records[_dataHash] = ProofRecord({\r\n            dataHash: _dataHash,\r\n            owner: msg.sender,\r\n            timestamp: block.timestamp\r\n        });\r\n\r\n        // Emite o evento para rastreabilidade\r\n        emit NewRecord(_dataHash, msg.sender, block.timestamp);\r\n    }\r\n\r\n    // Função para verificar se um dado existe e quem o registrou\r\n    function verifyData(string memory _dataHash) public view returns (address, uint256) {\r\n        require(records[_dataHash].owner != address(0), \"Dado nao encontrado\");\r\n        return (records[_dataHash].owner, records[_dataHash].timestamp);\r\n    }\r\n}"
+      }
+    }
+  }
+}
