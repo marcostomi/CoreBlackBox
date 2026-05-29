@@ -30,7 +30,7 @@ Assista ao vídeo demonstrando o funcionamento completo da aplicação:
 
 # 🖥️ Apresentação do Pitch
 
-📊 [Ver Apresentação]([COLE_AQUI_O_LINK_DO_GOOGLE_SLIDE](https://docs.google.com/presentation/d/1_SL-o6BP10mv5-DzsqWWgn-6jNkZX8eP/edit?slide=id.p1#slide=id.p1)
+📊 [Ver Apresentação]([COLE_AQUI_O_LINK_DO_GOOGLE_SLIDES](https://docs.google.com/presentation/d/1_SL-o6BP10mv5-DzsqWWgn-6jNkZX8eP/edit?slide=id.p1#slide=id.p1))
 
 ---
 
