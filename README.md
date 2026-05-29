@@ -28,9 +28,9 @@ Assista ao vídeo demonstrando o funcionamento completo da aplicação:
 
 ---
 
-# 🖥️ Apresentação do Pitch:
+# 🖥️ Apresentação do Pitch
 
-[![▶️ Assistir ao Vídeo](https://img.shields.io/badge/▶️%20Assistir%20ao%20Vídeo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/it-mUjesr0E)
+📊 [Ver Apresentação]([COLE_AQUI_O_LINK_DO_GOOGLE_SLIDE](https://docs.google.com/presentation/d/1_SL-o6BP10mv5-DzsqWWgn-6jNkZX8eP/edit?slide=id.p1#slide=id.p1)
 
 ---
 
