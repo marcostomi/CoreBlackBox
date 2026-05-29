@@ -16,9 +16,9 @@ O sistema foi criado com foco em segurança, transparência e confiabilidade no 
 
 # 🎥 Demonstração do Projeto
 
-Assista à apresentação do Pitch:
+Assista ao vídeo do Pitch:
 
-[![▶️ Assistir à Apresentação](https://img.shields.io/badge/▶️%20Assistir%20à%20Apresentação-4285F4?style=for-the-badge&logo=google-slides&logoColor=white)](https://docs.google.com/presentation/d/1_SL-o6BP10mv5-DzsqWWgn-6jNkZX8eP/edit?slide=id.p1#slide=id.p1)
+[![▶️ Assistir ao Vídeo](https://img.shields.io/badge/▶️%20Assistir%20ao%20Vídeo-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/EP9L-oFf_wo)
 
 
 Assista ao vídeo demonstrando o funcionamento completo da aplicação:
